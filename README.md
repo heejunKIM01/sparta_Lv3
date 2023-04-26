@@ -234,13 +234,10 @@ const Box_layout = styled.div`
 `   
 ```
 
-웹페이지 상에서 회색 테두리 박스로 보이는 부분이다. 이 부분에 overflow : hidden 을 적용함으로서 Box_layout의 자식요소들이 가려지게 된다.<br>
-
-이를 해결하기위해서 menuPortalTarget={document.body} 을 사용했는데, react-select 컴포넌트의 속성 중 하나이다.<br>    
-
-react-select 컴포넌트에서 메뉴가 표시될 때 메뉴가 렌더링될 기본 위치를 변경할 수 있도록 해준다. 기본적으로 react-select 메뉴는 DOM에서 가장 가까운 상위 요소를 찾아 해당 위치에 렌더링된다.  
-그러나 경우에 따라 메뉴가 기본 위치에서 벗어나야 할 필요가 있는데, 이때 menuPortalTarget prop을 사용하여 메뉴를 다른 위치에 렌더링할 수 있다.    
-
-menuPortalTarget prop은 메뉴가 렌더링될 대상 DOM 요소를 지정하는데 사용된다.   
-
+웹페이지 상에서 회색 테두리 박스로 보이는 부분이다. 이 부분에 overflow : hidden 을 적용함으로서 Box_layout의 자식요소들이 가려지게 된다.  
+이를 해결하기위해서 menuPortalTarget={document.body} 을 사용했는데, react-select 컴포넌트의 속성 중 하나이다.  
+react-select 컴포넌트에서 메뉴가 표시될 때 메뉴가 렌더링될 기본 위치를 변경할 수 있도록 해준다.  
+기본적으로 react-select 메뉴는 DOM에서 가장 가까운 상위 요소를 찾아 해당 위치에 렌더링된다.  
+그러나 경우에 따라 메뉴가 기본 위치에서 벗어나야 할 필요가 있는데, 이때 menuPortalTarget prop을 사용하여 메뉴를 다른 위치에 렌더링할 수 있다.  
+menuPortalTarget prop은 메뉴가 렌더링될 대상 DOM 요소를 지정하는데 사용된다.  
 위의 코드에서는 menuPortalTarget={document.body}를 전달하여 메뉴가 상위요소인 Box_layout 위로 렌더링되게 한다. 따라서, 모든 화면에서 이 메뉴를 사용할 수 있다.
